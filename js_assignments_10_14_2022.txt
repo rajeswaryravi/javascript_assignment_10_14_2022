@@ -1,0 +1,88 @@
+ASSIGNMENTS
+---------------------------------------------
+---------------------------------------------
+	1
+----------------------------------------
+
+function isUppercase(str)
+{
+   regexp = /^[A-Z]/;
+   if (regexp.test(str))
+    {
+      console.log("First character is uppercase");
+    } 
+    else
+    {
+      console.log("First character is not uppercase");
+    }
+}
+isUppercase('hello world');
+isUppercase('Hello world');
+
+
+
+	2
+-----------------------------------------------------
+
+function isValidphno(phonenumber)
+{
+   regexp = /^[0-9]{10}$/;
+   if (regexp.test(phonenumber))
+    {
+      console.log("Phone number is valid");
+    } 
+    else
+    {
+      console.log("Invalid phone number");
+    }
+}
+isValidphno('9845623419');
+isValidphno('967826451897');
+
+
+	3
+-----------------------------------------------------
+
+function validEmail(email)
+{
+var emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+if(emailformat.test(email))
+{  
+console.log("Valid email address");  
+}  
+else  
+{  
+console.log("Invalid email address");  
+}
+}
+
+validEmail('info@example.com');
+validEmail('.info@example.com.');
+
+
+
+	4
+-------------------------------------------------------
+
+function dateIsValid(dateStr) {
+  const regex = /^\d{4}-\d{2}-\d{2}$/;
+  const date = new Date(dateStr);
+  const timestamp = date.getTime();
+    return date.toISOString().startsWith(dateStr);
+}
+console.log(dateIsValid('2022-01-24'));
+console.log(dateIsValid('10-14-2022'));
+
+
+
+	5
+------------------------------------------------------
+
+function countWords(str1)
+{
+str1 = str1.replace(/(^\s*)|(\s*$)/gi,"");
+str1 = str1.replace(/[ ]{2,}/gi," ");
+str1 = str1.replace(/\n /,"\n");
+console.log(str1.split(' ').length);
+}
+countWords("Javascript is a programming language");
